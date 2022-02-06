@@ -98,9 +98,12 @@ class App extends Component {
   (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes). The
   Component's constructor is the first thing that runs when the object is created.
   */
-  constructor(props) {
-    super(props);
-    this.usersByMovie = {};
+ 
+    
+
+
+render() {
+  this.usersByMovie = {};
 
     /*
     We can map the users by the movie they liked.
@@ -114,10 +117,7 @@ class App extends Component {
         this.usersByMovie[movieID] = [profile.userID];
       }
     });
-  }
-
-
-render() {
+  
   return (
     <div>
       
