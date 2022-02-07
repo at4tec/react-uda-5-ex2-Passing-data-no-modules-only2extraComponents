@@ -103,12 +103,12 @@ class App extends Component {
 
 
 render() {
-  this.usersByMovie = {};
+  this.usersByMovie = [];
 
     /*
     We can map the users by the movie they liked.
     */
-    profiles.forEach(profile => {
+    profiles.map(profile => {
       const movieID = profile.favoriteMovieID;
 
       if (this.usersByMovie[movieID]) {
@@ -122,10 +122,12 @@ render() {
     <div>
       
       <h2>How Popular is Your Favorite Movie?</h2>
+      {this.usersByMovie[2]}
       <Dashboard
         usersByMovie={this.usersByMovie}
         movies={movies}
         users={users}
+        
       />
     </div>
   );
