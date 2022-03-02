@@ -122,7 +122,7 @@ render() {
     <div>
       
       <h2>How Popular is Your Favorite Movie?</h2>
-      {this.usersByMovie[2]}
+      {console.log(this.usersByMovie)}
       <Dashboard
         usersByMovie={this.usersByMovie}
         movies={movies}
